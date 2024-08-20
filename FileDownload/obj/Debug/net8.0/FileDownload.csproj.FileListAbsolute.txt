@@ -1,0 +1,15 @@
+C:\Users\pacoe\Documents\Semestre 5\Sistemas Distribuidos\FileDownload\obj\Debug\net8.0\FileDownload.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pacoe\Documents\Semestre 5\Sistemas Distribuidos\FileDownload\obj\Debug\net8.0\FileDownload.AssemblyInfoInputs.cache
+C:\Users\pacoe\Documents\Semestre 5\Sistemas Distribuidos\FileDownload\obj\Debug\net8.0\FileDownload.AssemblyInfo.cs
+C:\Users\pacoe\Documents\Semestre 5\Sistemas Distribuidos\FileDownload\obj\Debug\net8.0\FileDownload.csproj.CoreCompileInputs.cache
+C:\Users\pacoe\Documents\Semestre 5\Sistemas Distribuidos\FileDownload\obj\Debug\net8.0\FileDownload.sourcelink.json
+C:\Users\pacoe\Documents\Semestre 5\Sistemas Distribuidos\FileDownload\bin\Debug\net8.0\FileDownload.exe
+C:\Users\pacoe\Documents\Semestre 5\Sistemas Distribuidos\FileDownload\bin\Debug\net8.0\FileDownload.deps.json
+C:\Users\pacoe\Documents\Semestre 5\Sistemas Distribuidos\FileDownload\bin\Debug\net8.0\FileDownload.runtimeconfig.json
+C:\Users\pacoe\Documents\Semestre 5\Sistemas Distribuidos\FileDownload\bin\Debug\net8.0\FileDownload.dll
+C:\Users\pacoe\Documents\Semestre 5\Sistemas Distribuidos\FileDownload\bin\Debug\net8.0\FileDownload.pdb
+C:\Users\pacoe\Documents\Semestre 5\Sistemas Distribuidos\FileDownload\obj\Debug\net8.0\FileDownload.dll
+C:\Users\pacoe\Documents\Semestre 5\Sistemas Distribuidos\FileDownload\obj\Debug\net8.0\refint\FileDownload.dll
+C:\Users\pacoe\Documents\Semestre 5\Sistemas Distribuidos\FileDownload\obj\Debug\net8.0\FileDownload.pdb
+C:\Users\pacoe\Documents\Semestre 5\Sistemas Distribuidos\FileDownload\obj\Debug\net8.0\FileDownload.genruntimeconfig.cache
+C:\Users\pacoe\Documents\Semestre 5\Sistemas Distribuidos\FileDownload\obj\Debug\net8.0\ref\FileDownload.dll
