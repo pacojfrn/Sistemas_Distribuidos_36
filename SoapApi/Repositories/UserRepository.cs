@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
 using SoapApi.Infrastructure;
+using SoapApi.Infrastructure.Entities;
 using SoapApi.Mappers;
 using SoapApi.Models;
 
@@ -37,5 +38,50 @@ public class UserRespository : IUserRepository{
         
         return users.Select(user => user.ToModel()).ToList();
     }
+
+    public async Task DeleteByIdAsync(UserModel user, CancellationToken cancellationToken)
+    {
+        var UserEntity = user.ToEntity();
+        _dbContext.Users.Remove(UserEntity);
+        await _dbContext.SaveChangesAsync();
+    }
+
+    public async Task<UserModel> CreateAsync(UserModel user, CancellationToken cancellationToken)
+    {
+        var UserEntity = user.ToEntity();
+        UserEntity.Id = Guid.NewGuid();
+        await _dbContext.AddAsync(UserEntity, cancellationToken);
+        await _dbContext.SaveChangesAsync(cancellationToken);
+
+        return UserEntity.ToModel();
+    }
+
+    public async Task<bool> UpdateUser(Guid id,string firstName,string lastName,DateTime birthday, CancellationToken cancellationToken)
+    {
+        var user = await _dbContext.Users.FindAsync(new object[] { id }, cancellationToken);
+
+        if (user == null)
+        {
+            return false; // Usuario no encontrado
+        }
+
+        user.FirstName = firstName;
+        user.LastName = lastName;
+        user.Birthday = birthday;
+
+        _dbContext.Users.Update(user);
+
+        try
+        {
+            await _dbContext.SaveChangesAsync(cancellationToken);
+            return true; // Actualización exitosa
+        }
+        catch (Exception)
+        {
+            // Manejo de errores (opcional)
+            return false; // Error en la actualización
+        }
+    }
+
 
 }
