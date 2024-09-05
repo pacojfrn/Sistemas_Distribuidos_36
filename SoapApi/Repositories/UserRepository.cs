@@ -56,18 +56,13 @@ public class UserRespository : IUserRepository{
         return UserEntity.ToModel();
     }
 
-    public async Task<bool> UpdateUser(Guid id,string firstName,string lastName,DateTime birthday, CancellationToken cancellationToken)
+    public async Task<bool> UpdateUser(UserModel updateUser, CancellationToken cancellationToken)
     {
-        var user = await _dbContext.Users.FindAsync(new object[] { id }, cancellationToken);
+        var user = await _dbContext.Users.FindAsync(new object[] { updateUser.Id }, cancellationToken);
 
-        if (user == null)
-        {
-            return false; // Usuario no encontrado
-        }
-
-        user.FirstName = firstName;
-        user.LastName = lastName;
-        user.Birthday = birthday;
+        user.FirstName = updateUser.FirstName;
+        user.LastName = updateUser.LastName;
+        user.Birthday = updateUser.BirthDate;
 
         _dbContext.Users.Update(user);
 

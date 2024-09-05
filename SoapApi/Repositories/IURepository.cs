@@ -11,7 +11,7 @@ public interface IUserRepository {
 
     public Task<UserModel> CreateAsync(UserModel user, CancellationToken cancellationToken);
 
-    public Task<bool> UpdateUser(Guid userId, string firstName, string lastName, DateTime birthday, CancellationToken cancellationToken);
+    public Task<bool> UpdateUser(UserModel user, CancellationToken cancellationToken);
 
 }
 

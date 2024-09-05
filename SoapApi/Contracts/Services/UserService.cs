@@ -55,9 +55,14 @@ public class UserService : IUserContract{
         throw new FaultException("User not found");
     }
 
-    public async Task<bool> UpdateUser(Guid id, string firstName, string lastName, DateTime birthday, CancellationToken cancellationToken)
-        {
-            return await _userRepository.UpdateUser(id, firstName, lastName, birthday, cancellationToken);
+    public async Task<bool> UpdateUser(UserUpdateDto userUpdate, CancellationToken cancellationToken){
+        var user = userUpdate.ToModel();
+        await _userRepository.GetByIdAsync(user.Id, cancellationToken);
+        if (user is not null){
+            return await _userRepository.UpdateUser(user, cancellationToken);
         }
+        
+            throw new FaultException("User not found");
+    }
 }
 

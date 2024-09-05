@@ -47,4 +47,12 @@ public static class UserMapper{
             BirthDate = DateTime.UtcNow
         };
     }
+    public static UserModel ToModel(this UserUpdateDto user){
+        return new UserModel {
+            Id = user.UserId,
+            FirstName = user.FirstName,
+            LastName = user.LastName,
+            BirthDate = DateTime.UtcNow
+        };
+    }
 }

@@ -27,5 +27,5 @@ public interface IUserContract{
 
     [OperationContract]
 
-    public Task<bool> UpdateUser(Guid userId, string firstName, string lastName, DateTime birthday, CancellationToken cancellationToken);
+    public Task<bool> UpdateUser(UserUpdateDto user, CancellationToken cancellationToken);
 }
