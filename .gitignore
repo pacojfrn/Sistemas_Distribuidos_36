@@ -1,0 +1,39 @@
+# Archivos binarios de compilación y carpetas generadas automáticamente
+bin/
+obj/
+out/
+
+# Paquetes NuGet descargados
+*.nupkg
+*.snupkg
+packages/
+
+# Cache de NuGet
+.nuget/
+
+# Datos de usuario de Visual Studio
+.vscode/
+.vs/
+.vscode/
+**/*.csproj.user
+**/*.suo
+**/*.user
+**/*.userosscache
+**/*.sln.docstates
+*.sln
+
+# Configuraciones locales de la aplicación
+appsettings.*.json
+launchSettings.json
+
+# Archivos de bloqueo de dependencias
+project.lock.json
+project.fragment.lock.json
+
+# Archivos de Mac
+.DS_Store
+
+# Archivos temporales
+*.tmp
+*.log
+*.ide

@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using RestApi.Dtos;
 using RestApi.Infrastructure.Mongo;
 using RestApi.Models;
@@ -25,4 +26,5 @@ public static class GroupMapper{
             CreationDate = group.CreatedAt
         };
     }
+    
 }

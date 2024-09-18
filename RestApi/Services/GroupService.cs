@@ -9,7 +9,7 @@ public class GroupService : IGroupService
     public GroupService(IGroupRepository groupRepository){
         _groupRepository = groupRepository;
     }
-    public async Task<GroupUserModel> GetGroupByIdAync(string id, CancellationToken cancellationToken)
+    public async Task<GroupUserModel> GetGroupByIdAsync(string id, CancellationToken cancellationToken)
     {
         var group = await _groupRepository.GetByIdAsync(id,cancellationToken);
         if (group is null)
@@ -23,4 +23,15 @@ public class GroupService : IGroupService
         };
         
     }
+
+    public async Task<List<GroupUserModel>> GetGroupByNameAsync(string name, CancellationToken cancellationToken)
+    {
+        var group = await _groupRepository.GetByNameAsync(name,cancellationToken);
+        return group.Select(x => new GroupUserModel{
+            Id = x.Id,
+            Name = x.Name,
+            CreationDate = x.CreationDate
+        }).ToList();
+    }
+
 }
