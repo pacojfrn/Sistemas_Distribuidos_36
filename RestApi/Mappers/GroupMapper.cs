@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-using System.Text.RegularExpressions;
-=======
->>>>>>> d65eae242f824823ad62e338375cdadfff41386a
 using RestApi.Dtos;
 using RestApi.Infrastructure.Mongo;
 using RestApi.Models;
@@ -13,15 +9,21 @@ public static class GroupMapper{
         return new GroupResponse{
             Id = group.Id,
             Name = group.Name,
-            CreationDate = group.CreationDate
+            CreationDate = group.CreationDate,
+            Users = group.Users.ToDto()
         };
     }
+    public static List<UserResponse> ToDto(this IEnumerable<UserModel> users){
+        return users.Select(s => new UserResponse{
+            Id = s.Id,
+            Name = s.FirstName + " " + s.LastName,
+            Email = s.Email
+        }).ToList();
+    }
     public static GroupModel ToModel(this GroupEntity group){
-        if (group is null)
-        {
+        if(group is null){
             return null;
         }
-
         return new GroupModel{
             Id = group.Id,
             Name = group.Name,
@@ -29,8 +31,4 @@ public static class GroupMapper{
             CreationDate = group.CreatedAt
         };
     }
-<<<<<<< HEAD
-    
-=======
->>>>>>> d65eae242f824823ad62e338375cdadfff41386a
 }
