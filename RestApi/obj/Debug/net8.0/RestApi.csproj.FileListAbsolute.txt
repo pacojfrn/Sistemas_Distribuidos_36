@@ -45,3 +45,20 @@ C:\Users\pacoe\Documents\Semestre 5\Sistemas Distribuidos\RestApi\bin\Debug\net8
 C:\Users\pacoe\Documents\Semestre 5\Sistemas Distribuidos\RestApi\bin\Debug\net8.0\runtimes\linux\native\libmongocrypt.so
 C:\Users\pacoe\Documents\Semestre 5\Sistemas Distribuidos\RestApi\bin\Debug\net8.0\runtimes\osx\native\libmongocrypt.dylib
 C:\Users\pacoe\Documents\Semestre 5\Sistemas Distribuidos\RestApi\bin\Debug\net8.0\runtimes\win\native\mongocrypt.dll
+<<<<<<< HEAD
+C:\Users\pacoe\Documents\Semestre 5\Sistemas Distribuidos\RestApi\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\pacoe\Documents\Semestre 5\Sistemas Distribuidos\RestApi\bin\Debug\net8.0\SoapCore.dll
+C:\Users\pacoe\Documents\Semestre 5\Sistemas Distribuidos\RestApi\bin\Debug\net8.0\System.CodeDom.dll
+C:\Users\pacoe\Documents\Semestre 5\Sistemas Distribuidos\RestApi\bin\Debug\net8.0\System.Drawing.Common.dll
+C:\Users\pacoe\Documents\Semestre 5\Sistemas Distribuidos\RestApi\bin\Debug\net8.0\System.Private.ServiceModel.dll
+C:\Users\pacoe\Documents\Semestre 5\Sistemas Distribuidos\RestApi\bin\Debug\net8.0\System.Security.Permissions.dll
+C:\Users\pacoe\Documents\Semestre 5\Sistemas Distribuidos\RestApi\bin\Debug\net8.0\System.ServiceModel.Http.dll
+C:\Users\pacoe\Documents\Semestre 5\Sistemas Distribuidos\RestApi\bin\Debug\net8.0\System.ServiceModel.Primitives.dll
+C:\Users\pacoe\Documents\Semestre 5\Sistemas Distribuidos\RestApi\bin\Debug\net8.0\System.ServiceModel.dll
+C:\Users\pacoe\Documents\Semestre 5\Sistemas Distribuidos\RestApi\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Users\pacoe\Documents\Semestre 5\Sistemas Distribuidos\RestApi\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\pacoe\Documents\Semestre 5\Sistemas Distribuidos\RestApi\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\pacoe\Documents\Semestre 5\Sistemas Distribuidos\RestApi\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\pacoe\Documents\Semestre 5\Sistemas Distribuidos\RestApi\bin\Debug\net8.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+=======
+>>>>>>> d65eae242f824823ad62e338375cdadfff41386a

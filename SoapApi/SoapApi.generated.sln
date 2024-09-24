@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
 <<<<<<< HEAD
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoapApi", "SoapApi.csproj", "{C670E7E4-57F6-49F2-A1AA-7BCE78D5FC72}"
+=======
+<<<<<<< HEAD
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoapApi", "SoapApi.csproj", "{CDA74A36-0903-4305-924F-09986B98535D}"
 =======
 <<<<<<< HEAD
@@ -16,6 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoapApi", "SoapApi.csproj",
 >>>>>>> f687bda72c2c50207500665b583f0bc2963e378f
 >>>>>>> main
 >>>>>>> 64852ac540bb66c270558a06e08e6f7cd8e9920e
+>>>>>>> d65eae242f824823ad62e338375cdadfff41386a
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +27,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+<<<<<<< HEAD
+		{C670E7E4-57F6-49F2-A1AA-7BCE78D5FC72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C670E7E4-57F6-49F2-A1AA-7BCE78D5FC72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C670E7E4-57F6-49F2-A1AA-7BCE78D5FC72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C670E7E4-57F6-49F2-A1AA-7BCE78D5FC72}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -47,6 +57,7 @@ Global
 >>>>>>> f687bda72c2c50207500665b583f0bc2963e378f
 >>>>>>> main
 >>>>>>> 64852ac540bb66c270558a06e08e6f7cd8e9920e
+>>>>>>> d65eae242f824823ad62e338375cdadfff41386a
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

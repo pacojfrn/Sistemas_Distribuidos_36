@@ -34,7 +34,10 @@ C:\Users\pacoe\Documents\Semestre 5\Sistemas Distribuidos\Sistemas_Distribuidos_
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 64852ac540bb66c270558a06e08e6f7cd8e9920e
+>>>>>>> d65eae242f824823ad62e338375cdadfff41386a
 C:\Users\pacoe\Documents\Semestre 5\Sistemas Distribuidos\.net\HelloWorld\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\pacoe\Documents\Semestre 5\Sistemas Distribuidos\.net\HelloWorld\bin\Debug\net8.0\appsettings.json
 C:\Users\pacoe\Documents\Semestre 5\Sistemas Distribuidos\.net\HelloWorld\bin\Debug\net8.0\HelloWorld.exe
@@ -71,6 +74,9 @@ C:\Users\pacoe\Documents\Semestre 5\Sistemas Distribuidos\.net\HelloWorld\obj\De
 C:\Users\pacoe\Documents\Semestre 5\Sistemas Distribuidos\.net\HelloWorld\obj\Debug\net8.0\ref\HelloWorld.dll
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> main
 >>>>>>> 64852ac540bb66c270558a06e08e6f7cd8e9920e
+>>>>>>> d65eae242f824823ad62e338375cdadfff41386a
