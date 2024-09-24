@@ -25,6 +25,7 @@ public class GroupRepository : IGroupRepository
             return null;
         }
     }
+<<<<<<< HEAD
 
     public async Task<List<GroupModel>> GetByNameAsync(string name, CancellationToken cancellationToken)
 {
@@ -42,4 +43,6 @@ public class GroupRepository : IGroupRepository
 
     return groupModels;
 }
+=======
+>>>>>>> d65eae242f824823ad62e338375cdadfff41386a
 }

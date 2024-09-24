@@ -10,7 +10,10 @@
         "dependencies": {
           "Microsoft.AspNetCore.OpenApi": "8.0.6",
           "MongoDB.Driver": "2.28.0",
+<<<<<<< HEAD
           "SoapCore": "1.1.0.49",
+=======
+>>>>>>> d65eae242f824823ad62e338375cdadfff41386a
           "Swashbuckle.AspNetCore": "6.4.0"
         },
         "runtime": {
@@ -47,6 +50,7 @@
           }
         }
       },
+<<<<<<< HEAD
       "Microsoft.AspNetCore.Connections.Abstractions/6.0.27": {
         "dependencies": {
           "Microsoft.Extensions.Features": "6.0.27",
@@ -70,6 +74,8 @@
           "Microsoft.Net.Http.Headers": "2.1.1"
         }
       },
+=======
+>>>>>>> d65eae242f824823ad62e338375cdadfff41386a
       "Microsoft.AspNetCore.OpenApi/8.0.6": {
         "dependencies": {
           "Microsoft.OpenApi": "1.4.3"
@@ -81,6 +87,7 @@
           }
         }
       },
+<<<<<<< HEAD
       "Microsoft.AspNetCore.Routing.Abstractions/2.1.1": {
         "dependencies": {
           "Microsoft.AspNetCore.Http.Abstractions": "2.1.1"
@@ -101,6 +108,10 @@
           "System.Buffers": "4.5.1"
         }
       },
+=======
+      "Microsoft.Extensions.ApiDescription.Server/6.0.5": {},
+      "Microsoft.Extensions.Logging.Abstractions/2.0.0": {},
+>>>>>>> d65eae242f824823ad62e338375cdadfff41386a
       "Microsoft.NETCore.Platforms/5.0.0": {},
       "Microsoft.OpenApi/1.4.3": {
         "runtime": {
@@ -116,6 +127,7 @@
           "System.Security.Principal.Windows": "5.0.0"
         }
       },
+<<<<<<< HEAD
       "Microsoft.Win32.SystemEvents/4.7.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "5.0.0"
@@ -135,6 +147,8 @@
           }
         }
       },
+=======
+>>>>>>> d65eae242f824823ad62e338375cdadfff41386a
       "MongoDB.Bson/2.28.0": {
         "dependencies": {
           "System.Memory": "4.5.5",
@@ -221,6 +235,7 @@
           }
         }
       },
+<<<<<<< HEAD
       "SoapCore/1.1.0.49": {
         "dependencies": {
           "Microsoft.AspNetCore.Connections.Abstractions": "6.0.27",
@@ -238,6 +253,8 @@
           }
         }
       },
+=======
+>>>>>>> d65eae242f824823ad62e338375cdadfff41386a
       "Swashbuckle.AspNetCore/6.4.0": {
         "dependencies": {
           "Microsoft.Extensions.ApiDescription.Server": "6.0.5",
@@ -277,6 +294,7 @@
         }
       },
       "System.Buffers/4.5.1": {},
+<<<<<<< HEAD
       "System.CodeDom/6.0.0": {
         "runtime": {
           "lib/net6.0/System.CodeDom.dll": {
@@ -329,6 +347,9 @@
         }
       },
       "System.Reflection.DispatchProxy/4.7.1": {},
+=======
+      "System.Memory/4.5.5": {},
+>>>>>>> d65eae242f824823ad62e338375cdadfff41386a
       "System.Runtime.CompilerServices.Unsafe/5.0.0": {},
       "System.Security.AccessControl/5.0.0": {
         "dependencies": {
@@ -336,6 +357,7 @@
           "System.Security.Principal.Windows": "5.0.0"
         }
       },
+<<<<<<< HEAD
       "System.Security.Cryptography.Cng/4.7.0": {},
       "System.Security.Cryptography.Pkcs/4.7.0": {
         "dependencies": {
@@ -408,6 +430,9 @@
           }
         }
       },
+=======
+      "System.Security.Principal.Windows/5.0.0": {},
+>>>>>>> d65eae242f824823ad62e338375cdadfff41386a
       "ZstdSharp.Port/0.7.3": {
         "runtime": {
           "lib/net7.0/ZstdSharp.dll": {
@@ -445,6 +470,7 @@
       "path": "dnsclient/1.6.1",
       "hashPath": "dnsclient.1.6.1.nupkg.sha512"
     },
+<<<<<<< HEAD
     "Microsoft.AspNetCore.Connections.Abstractions/6.0.27": {
       "type": "package",
       "serviceable": true,
@@ -473,6 +499,8 @@
       "path": "microsoft.aspnetcore.mvc.abstractions/2.1.38",
       "hashPath": "microsoft.aspnetcore.mvc.abstractions.2.1.38.nupkg.sha512"
     },
+=======
+>>>>>>> d65eae242f824823ad62e338375cdadfff41386a
     "Microsoft.AspNetCore.OpenApi/8.0.6": {
       "type": "package",
       "serviceable": true,
@@ -480,6 +508,7 @@
       "path": "microsoft.aspnetcore.openapi/8.0.6",
       "hashPath": "microsoft.aspnetcore.openapi.8.0.6.nupkg.sha512"
     },
+<<<<<<< HEAD
     "Microsoft.AspNetCore.Routing.Abstractions/2.1.1": {
       "type": "package",
       "serviceable": true,
@@ -487,6 +516,8 @@
       "path": "microsoft.aspnetcore.routing.abstractions/2.1.1",
       "hashPath": "microsoft.aspnetcore.routing.abstractions.2.1.1.nupkg.sha512"
     },
+=======
+>>>>>>> d65eae242f824823ad62e338375cdadfff41386a
     "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
       "type": "package",
       "serviceable": true,
@@ -494,6 +525,7 @@
       "path": "microsoft.extensions.apidescription.server/6.0.5",
       "hashPath": "microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512"
     },
+<<<<<<< HEAD
     "Microsoft.Extensions.Features/6.0.27": {
       "type": "package",
       "serviceable": true,
@@ -501,6 +533,8 @@
       "path": "microsoft.extensions.features/6.0.27",
       "hashPath": "microsoft.extensions.features.6.0.27.nupkg.sha512"
     },
+=======
+>>>>>>> d65eae242f824823ad62e338375cdadfff41386a
     "Microsoft.Extensions.Logging.Abstractions/2.0.0": {
       "type": "package",
       "serviceable": true,
@@ -508,6 +542,7 @@
       "path": "microsoft.extensions.logging.abstractions/2.0.0",
       "hashPath": "microsoft.extensions.logging.abstractions.2.0.0.nupkg.sha512"
     },
+<<<<<<< HEAD
     "Microsoft.Extensions.Primitives/2.1.1": {
       "type": "package",
       "serviceable": true,
@@ -522,6 +557,8 @@
       "path": "microsoft.net.http.headers/2.1.1",
       "hashPath": "microsoft.net.http.headers.2.1.1.nupkg.sha512"
     },
+=======
+>>>>>>> d65eae242f824823ad62e338375cdadfff41386a
     "Microsoft.NETCore.Platforms/5.0.0": {
       "type": "package",
       "serviceable": true,
@@ -543,6 +580,7 @@
       "path": "microsoft.win32.registry/5.0.0",
       "hashPath": "microsoft.win32.registry.5.0.0.nupkg.sha512"
     },
+<<<<<<< HEAD
     "Microsoft.Win32.SystemEvents/4.7.0": {
       "type": "package",
       "serviceable": true,
@@ -550,6 +588,8 @@
       "path": "microsoft.win32.systemevents/4.7.0",
       "hashPath": "microsoft.win32.systemevents.4.7.0.nupkg.sha512"
     },
+=======
+>>>>>>> d65eae242f824823ad62e338375cdadfff41386a
     "MongoDB.Bson/2.28.0": {
       "type": "package",
       "serviceable": true,
@@ -592,6 +632,7 @@
       "path": "snappier/1.0.0",
       "hashPath": "snappier.1.0.0.nupkg.sha512"
     },
+<<<<<<< HEAD
     "SoapCore/1.1.0.49": {
       "type": "package",
       "serviceable": true,
@@ -599,6 +640,8 @@
       "path": "soapcore/1.1.0.49",
       "hashPath": "soapcore.1.1.0.49.nupkg.sha512"
     },
+=======
+>>>>>>> d65eae242f824823ad62e338375cdadfff41386a
     "Swashbuckle.AspNetCore/6.4.0": {
       "type": "package",
       "serviceable": true,
@@ -634,6 +677,7 @@
       "path": "system.buffers/4.5.1",
       "hashPath": "system.buffers.4.5.1.nupkg.sha512"
     },
+<<<<<<< HEAD
     "System.CodeDom/6.0.0": {
       "type": "package",
       "serviceable": true,
@@ -655,6 +699,8 @@
       "path": "system.io.pipelines/6.0.3",
       "hashPath": "system.io.pipelines.6.0.3.nupkg.sha512"
     },
+=======
+>>>>>>> d65eae242f824823ad62e338375cdadfff41386a
     "System.Memory/4.5.5": {
       "type": "package",
       "serviceable": true,
@@ -662,6 +708,7 @@
       "path": "system.memory/4.5.5",
       "hashPath": "system.memory.4.5.5.nupkg.sha512"
     },
+<<<<<<< HEAD
     "System.Numerics.Vectors/4.5.0": {
       "type": "package",
       "serviceable": true,
@@ -683,6 +730,8 @@
       "path": "system.reflection.dispatchproxy/4.7.1",
       "hashPath": "system.reflection.dispatchproxy.4.7.1.nupkg.sha512"
     },
+=======
+>>>>>>> d65eae242f824823ad62e338375cdadfff41386a
     "System.Runtime.CompilerServices.Unsafe/5.0.0": {
       "type": "package",
       "serviceable": true,
@@ -697,6 +746,7 @@
       "path": "system.security.accesscontrol/5.0.0",
       "hashPath": "system.security.accesscontrol.5.0.0.nupkg.sha512"
     },
+<<<<<<< HEAD
     "System.Security.Cryptography.Cng/4.7.0": {
       "type": "package",
       "serviceable": true,
@@ -725,6 +775,8 @@
       "path": "system.security.permissions/4.7.0",
       "hashPath": "system.security.permissions.4.7.0.nupkg.sha512"
     },
+=======
+>>>>>>> d65eae242f824823ad62e338375cdadfff41386a
     "System.Security.Principal.Windows/5.0.0": {
       "type": "package",
       "serviceable": true,
@@ -732,6 +784,7 @@
       "path": "system.security.principal.windows/5.0.0",
       "hashPath": "system.security.principal.windows.5.0.0.nupkg.sha512"
     },
+<<<<<<< HEAD
     "System.ServiceModel.Http/4.8.1": {
       "type": "package",
       "serviceable": true,
@@ -760,6 +813,8 @@
       "path": "system.windows.extensions/4.7.0",
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
     },
+=======
+>>>>>>> d65eae242f824823ad62e338375cdadfff41386a
     "ZstdSharp.Port/0.7.3": {
       "type": "package",
       "serviceable": true,

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 using System.Text.RegularExpressions;
+=======
+>>>>>>> d65eae242f824823ad62e338375cdadfff41386a
 using RestApi.Dtos;
 using RestApi.Infrastructure.Mongo;
 using RestApi.Models;
@@ -26,5 +29,8 @@ public static class GroupMapper{
             CreationDate = group.CreatedAt
         };
     }
+<<<<<<< HEAD
     
+=======
+>>>>>>> d65eae242f824823ad62e338375cdadfff41386a
 }

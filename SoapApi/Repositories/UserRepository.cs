@@ -1,7 +1,22 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query;
 using SoapApi.Infrastructure;
+<<<<<<< HEAD
 using SoapApi.Infrastructure.Entities;
+=======
+<<<<<<< HEAD
+using SoapApi.Infrastructure.Entities;
+=======
+<<<<<<< HEAD
+using SoapApi.Infrastructure.Entities;
+=======
+<<<<<<< HEAD
+using SoapApi.Infrastructure.Entities;
+=======
+>>>>>>> f687bda72c2c50207500665b583f0bc2963e378f
+>>>>>>> main
+>>>>>>> 64852ac540bb66c270558a06e08e6f7cd8e9920e
+>>>>>>> d65eae242f824823ad62e338375cdadfff41386a
 using SoapApi.Mappers;
 using SoapApi.Models;
 
@@ -39,6 +54,16 @@ public class UserRespository : IUserRepository{
         return users.Select(user => user.ToModel()).ToList();
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> 64852ac540bb66c270558a06e08e6f7cd8e9920e
+>>>>>>> d65eae242f824823ad62e338375cdadfff41386a
     public async Task DeleteByIdAsync(UserModel user, CancellationToken cancellationToken)
     {
         var UserEntity = user.ToEntity();
@@ -79,4 +104,15 @@ public class UserRespository : IUserRepository{
     }
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f687bda72c2c50207500665b583f0bc2963e378f
+>>>>>>> main
+>>>>>>> 64852ac540bb66c270558a06e08e6f7cd8e9920e
+>>>>>>> d65eae242f824823ad62e338375cdadfff41386a
 }
