@@ -9,7 +9,10 @@ public class RelationalDbContext : DbContext{
     }
 
     public DbSet<UserEntity> Users{ get; set; }
+<<<<<<< HEAD
     public DbSet<BookEntity> Books{ get; set; }
+=======
+>>>>>>> main
     
 
 }
