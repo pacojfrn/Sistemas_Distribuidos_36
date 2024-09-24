@@ -4,7 +4,11 @@ using SoapApi.Infrastructure;
 <<<<<<< HEAD
 using SoapApi.Infrastructure.Entities;
 =======
+<<<<<<< HEAD
+using SoapApi.Infrastructure.Entities;
+=======
 >>>>>>> f687bda72c2c50207500665b583f0bc2963e378f
+>>>>>>> main
 using SoapApi.Mappers;
 using SoapApi.Models;
 
@@ -43,6 +47,9 @@ public class UserRespository : IUserRepository{
     }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
     public async Task DeleteByIdAsync(UserModel user, CancellationToken cancellationToken)
     {
         var UserEntity = user.ToEntity();
@@ -83,6 +90,9 @@ public class UserRespository : IUserRepository{
     }
 
 
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> f687bda72c2c50207500665b583f0bc2963e378f
+>>>>>>> main
 }
