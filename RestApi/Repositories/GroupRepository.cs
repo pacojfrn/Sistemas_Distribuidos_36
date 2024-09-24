@@ -1,7 +1,7 @@
 using MongoDB.Driver;
 using RestApi.Infrastructure.Mongo;
-using RestApi.Models;
 using RestApi.Mappers;
+using RestApi.Models;
 
 namespace RestApi.Repositories;
 
@@ -12,37 +12,21 @@ public class GroupRepository : IGroupRepository
         var database = mongoClient.GetDatabase(configuration.GetValue<string>("MongoDb:Groups:DatabaseName"));
         _groups = database.GetCollection<GroupEntity>(configuration.GetValue<string>("MongoDb:Groups:CollectionName"));
     }
-     public async Task<GroupModel> GetByIdAsync(string id, CancellationToken cancellationToken)
+    public async Task<GroupModel> GetByIdAsync(string Id, CancellationToken cancellationToken)
     {
-        try
-        {
-            var filter = Builders<GroupEntity>.Filter.Eq(x => x.Id, id);
+        try{
+            var filter = Builders<GroupEntity>.Filter.Eq(x => x.Id, Id);
             var group = await _groups.Find(filter).FirstOrDefaultAsync(cancellationToken);
             return group.ToModel();
-        }
-        catch (FormatException)
-        {
+        }catch(FormatException){
             return null;
         }
     }
-<<<<<<< HEAD
 
-    public async Task<List<GroupModel>> GetByNameAsync(string name, CancellationToken cancellationToken)
-{
-    var filter = Builders<GroupEntity>.Filter.Regex(x => x.Name, new MongoDB.Bson.BsonRegularExpression(name, "i"));
-
-    var groupEntities = await _groups.Find(filter).ToListAsync(cancellationToken);
-
-    var groupModels = groupEntities.Select(g => new GroupModel
+    public async Task<IEnumerable<GroupModel>> GetByNameAsync(string name, CancellationToken cancellationToken) // Nuevo método
     {
-        Id = g.Id,
-        Name = g.Name,
-        Users = g.Users,
-        CreationDate = g.CreatedAt
-    }).ToList();
-
-    return groupModels;
-}
-=======
->>>>>>> d65eae242f824823ad62e338375cdadfff41386a
+        var filter = Builders<GroupEntity>.Filter.Regex(x => x.Name, new MongoDB.Bson.BsonRegularExpression(name, "i")); // Búsqueda por coincidencia parcial
+        var groups = await _groups.Find(filter).ToListAsync(cancellationToken);
+        return groups.Select(group => group.ToModel());
+    }
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yj4ZcPcjdfpL0ESj0SNYaOfVQ2rQdL2fqO/4e+QC3jw9EX69g2oKrqhx6Mjq6PxA94Z1/CQegdtjJY51SOvpCA==",
+  "dgSpecHash": "MJUt1M/pGoaVOY32jRjgQep8S5cHb6SkVlJbz9Lov3KRr3eOxQsh9jvUCErIZmHKbECGqQyBwOymWbzMJ1AqeA==",
   "success": true,
   "projectFilePath": "C:\\Users\\pacoe\\Documents\\Semestre 5\\Sistemas Distribuidos\\RestApi\\RestApi.csproj",
   "expectedPackageFiles": [
@@ -11,7 +11,7 @@
     "C:\\Users\\pacoe\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.1.1\\microsoft.aspnetcore.http.abstractions.2.1.1.nupkg.sha512",
     "C:\\Users\\pacoe\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.1.1\\microsoft.aspnetcore.http.features.2.1.1.nupkg.sha512",
     "C:\\Users\\pacoe\\.nuget\\packages\\microsoft.aspnetcore.mvc.abstractions\\2.1.38\\microsoft.aspnetcore.mvc.abstractions.2.1.38.nupkg.sha512",
-    "C:\\Users\\pacoe\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.6\\microsoft.aspnetcore.openapi.8.0.6.nupkg.sha512",
+    "C:\\Users\\pacoe\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.7\\microsoft.aspnetcore.openapi.8.0.7.nupkg.sha512",
     "C:\\Users\\pacoe\\.nuget\\packages\\microsoft.aspnetcore.routing.abstractions\\2.1.1\\microsoft.aspnetcore.routing.abstractions.2.1.1.nupkg.sha512",
     "C:\\Users\\pacoe\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\pacoe\\.nuget\\packages\\microsoft.extensions.features\\6.0.27\\microsoft.extensions.features.6.0.27.nupkg.sha512",
