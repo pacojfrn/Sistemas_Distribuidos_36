@@ -1,6 +1,8 @@
 using RestApi.Models;
 using RestApi.Repositories;
 using RestApi.Exceptions;
+using System.Linq;
+
 
 namespace RestApi.Services;
 
@@ -52,25 +54,36 @@ public class GroupService : IGroupService
         await _groupRepository.DeleteByIdAsync(Id,cancellationToken);
     }
 
-
-    public async Task<GroupUserModel> CreateGroupAsync(string name, int pageIndex, int pageSize, string orderBy, Guid[] users, CancellationToken cancellationToken){
-
+    public async Task<GroupUserModel> CreateGroupAsync(string name, Guid[] users, CancellationToken cancellationToken)
+    {
         if (users.Length == 0)
         {
             throw new InvalidGroupRequestFormatException();
         }
 
-        var groups = await _groupRepository.GetByNameAsync(name,pageIndex,pageSize,orderBy, cancellationToken);
-        if(groups.Any()){
+        var existingGroup = await _groupRepository.GetByNameSpecAsync(name, cancellationToken);
+        if (existingGroup != null)
+        {
             throw new GroupAlreadyExistsException();
         }
-        var group = await _groupRepository.CreateGroupAsync(name,users,cancellationToken);
-        return new GroupUserModel{
+        foreach (var userId in users)
+        {
+            var user = await _userRepository.GetByIdAsync(userId, cancellationToken);
+            if (user == null)
+            {
+                throw new UserNotFoundException();
+            }
+        }
+
+        var group = await _groupRepository.CreateGroupAsync(name, users, cancellationToken);
+
+        return new GroupUserModel
+        {
             Id = group.Id,
             Name = group.Name,
             CreationDate = group.CreationDate,
-            Users = (await Task.WhenAll(group.Users.Select(userId => _userRepository.GetByIdAsync(userId, cancellationToken)))).Where(user => user !=null).ToList()
-
+            Users = (await Task.WhenAll(group.Users.Select(userId => _userRepository.GetByIdAsync(userId, cancellationToken))))
+                        .Where(user => user != null).ToList()
         };
     }
     
@@ -86,7 +99,6 @@ public class GroupService : IGroupService
             Users = (await Task.WhenAll(group.Users.Select(userId => _userRepository.GetByIdAsync(userId, cancellationToken)))).Where(user => user !=null).ToList()
         };
     }
-
     public async Task UpdateGroupAsync(string id, string name, Guid[] users,CancellationToken cancellationToken){
         if (users.Length == 0)
         {
@@ -95,9 +107,16 @@ public class GroupService : IGroupService
         var groups = await _groupRepository.GetByIdAsync(id, cancellationToken);
         if (groups is null)
         {
-            throw new GroupNotFoundException();
+            throw new UserNotFoundException();
         }
-        
+        foreach (var userId in users)
+        {
+            var user = await _userRepository.GetByIdAsync(userId, cancellationToken);
+            if (user == null)
+            {
+                throw new GroupAlreadyExistsException();
+            }
+        }
         groups = await _groupRepository.GetByNameSpecAsync(name,cancellationToken);
         if(groups is not null){
             throw new GroupAlreadyExistsException();
@@ -106,4 +125,23 @@ public class GroupService : IGroupService
         await _groupRepository.UpdateGroupAsync(id,name,users,cancellationToken);
     }
     
+    public async Task<IEnumerable<GroupUserModel>> GetAllGroupsAsync(CancellationToken cancellationToken){
+        var groups = await _groupRepository.GetAllAsync(cancellationToken);
+        if(groups is null){
+            return null;
+        }
+        var groupUserModels = await Task.WhenAll(groups.Select(async group => 
+        {
+            var users = await Task.WhenAll(group.Users.Select(userId => _userRepository.GetByIdAsync(userId, cancellationToken)));
+            return new GroupUserModel
+            {
+                Id = group.Id,
+                Name = group.Name,
+                CreationDate = group.CreationDate,
+                Users = users.Where(user => user != null).ToList()
+            };
+        }));
+        return null;
+    }
+
 }
