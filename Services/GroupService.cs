@@ -71,7 +71,7 @@ public class GroupService : IGroupService
             var user = await _userRepository.GetByIdAsync(userId, cancellationToken);
             if (user == null)
             {
-                throw new GroupAlreadyExistsException();
+                throw new UserNotFoundException();
             }
         }
 
@@ -107,7 +107,7 @@ public class GroupService : IGroupService
         var groups = await _groupRepository.GetByIdAsync(id, cancellationToken);
         if (groups is null)
         {
-            throw new GroupNotFoundException();
+            throw new UserNotFoundException();
         }
         foreach (var userId in users)
         {
