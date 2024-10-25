@@ -107,14 +107,14 @@ public class GroupService : IGroupService
         var groups = await _groupRepository.GetByIdAsync(id, cancellationToken);
         if (groups is null)
         {
-            throw new UserNotFoundException();
+            throw new GroupNotFoundException();
         }
         foreach (var userId in users)
         {
             var user = await _userRepository.GetByIdAsync(userId, cancellationToken);
             if (user == null)
             {
-                throw new GroupAlreadyExistsException();
+                throw new UserAlreadyExistsException();
             }
         }
         groups = await _groupRepository.GetByNameSpecAsync(name,cancellationToken);
