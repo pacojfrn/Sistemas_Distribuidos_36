@@ -64,6 +64,19 @@ public class GroupService : IGroupService
         if(groups.Any()){
             throw new GroupAlreadyExistsException();
         }
+        foreach (var userId in users)
+        {
+            var user = await _userRepository.GetByIdAsync(userId, cancellationToken);
+            if (user == null)
+            {
+                throw new UserNotFoundException();
+            }
+        }
+
+        var group = await _groupRepository.CreateGroupAsync(name, users, cancellationToken);
+
+        return new GroupUserModel
+        {
         var group = await _groupRepository.CreateGroupAsync(name,users,cancellationToken);
         return new GroupUserModel{
             Id = group.Id,
@@ -97,6 +110,14 @@ public class GroupService : IGroupService
         {
             throw new GroupNotFoundException();
         }
+        foreach (var userId in users)
+        {
+            var user = await _userRepository.GetByIdAsync(userId, cancellationToken);
+            if (user == null)
+            {
+                throw new UserAlreadyExistsException();
+            }
+        }
         
         groups = await _groupRepository.GetByNameSpecAsync(name,cancellationToken);
         if(groups is not null){
@@ -106,4 +127,24 @@ public class GroupService : IGroupService
         await _groupRepository.UpdateGroupAsync(id,name,users,cancellationToken);
     }
     
+    public async Task<IEnumerable<GroupUserModel>> GetAllGroupsAsync(CancellationToken cancellationToken){
+        var groups = await _groupRepository.GetAllAsync(cancellationToken);
+        if(groups is null){
+            return null;
+        }
+        var groupUserModels = await Task.WhenAll(groups.Select(async group => 
+        {
+            var users = await Task.WhenAll(group.Users.Select(userId => _userRepository.GetByIdAsync(userId, cancellationToken)));
+            return new GroupUserModel
+            {
+                Id = group.Id,
+                Name = group.Name,
+                CreationDate = group.CreationDate,
+                Users = users.Where(user => user != null).ToList()
+            };
+        }));
+        return null;
+    }
+
+}
 }
