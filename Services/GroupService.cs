@@ -1,8 +1,6 @@
 using RestApi.Models;
 using RestApi.Repositories;
 using RestApi.Exceptions;
-using System.Linq;
-
 
 namespace RestApi.Services;
 
@@ -54,16 +52,16 @@ public class GroupService : IGroupService
         await _groupRepository.DeleteByIdAsync(Id,cancellationToken);
     }
 
-    public async Task<GroupUserModel> CreateGroupAsync(string name, Guid[] users, CancellationToken cancellationToken)
-    {
+
+    public async Task<GroupUserModel> CreateGroupAsync(string name, int pageIndex, int pageSize, string orderBy, Guid[] users, CancellationToken cancellationToken){
+
         if (users.Length == 0)
         {
             throw new InvalidGroupRequestFormatException();
         }
 
-        var existingGroup = await _groupRepository.GetByNameSpecAsync(name, cancellationToken);
-        if (existingGroup != null)
-        {
+        var groups = await _groupRepository.GetByNameAsync(name,pageIndex,pageSize,orderBy, cancellationToken);
+        if(groups.Any()){
             throw new GroupAlreadyExistsException();
         }
         foreach (var userId in users)
@@ -79,11 +77,13 @@ public class GroupService : IGroupService
 
         return new GroupUserModel
         {
+        var group = await _groupRepository.CreateGroupAsync(name,users,cancellationToken);
+        return new GroupUserModel{
             Id = group.Id,
             Name = group.Name,
             CreationDate = group.CreationDate,
-            Users = (await Task.WhenAll(group.Users.Select(userId => _userRepository.GetByIdAsync(userId, cancellationToken))))
-                        .Where(user => user != null).ToList()
+            Users = (await Task.WhenAll(group.Users.Select(userId => _userRepository.GetByIdAsync(userId, cancellationToken)))).Where(user => user !=null).ToList()
+
         };
     }
     
@@ -99,6 +99,7 @@ public class GroupService : IGroupService
             Users = (await Task.WhenAll(group.Users.Select(userId => _userRepository.GetByIdAsync(userId, cancellationToken)))).Where(user => user !=null).ToList()
         };
     }
+
     public async Task UpdateGroupAsync(string id, string name, Guid[] users,CancellationToken cancellationToken){
         if (users.Length == 0)
         {
@@ -117,6 +118,7 @@ public class GroupService : IGroupService
                 throw new UserAlreadyExistsException();
             }
         }
+        
         groups = await _groupRepository.GetByNameSpecAsync(name,cancellationToken);
         if(groups is not null){
             throw new GroupAlreadyExistsException();
@@ -144,4 +146,5 @@ public class GroupService : IGroupService
         return null;
     }
 
+}
 }
