@@ -14,4 +14,7 @@ public class UserResponseDto{
     public string LastName { get; set;} = null!;
     [DataMember]
     public DateTime BirthDate { get; set;} 
+    
+     
+
 }
