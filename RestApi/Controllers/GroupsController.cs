@@ -20,6 +20,7 @@ public class GroupsController : ControllerBase
         _groupService = groupService;
     }
     [HttpGet("{id}")]
+    [Authorize(Policy = "Read")]
     public async Task<ActionResult<GroupResponse>> GetGroupById(string id, CancellationToken cancellationToken)
     {
         var group = await _groupService.GetGroupByIdAsync(id, cancellationToken);
@@ -59,6 +60,7 @@ public class GroupsController : ControllerBase
         // 204 - sin response
 
     [HttpGet]
+    [Authorize(Policy = "Read")]
     public async Task<ActionResult<IEnumerable<GroupResponse>>> GetGroupsByName(
         CancellationToken cancellationToken,
         [FromQuery] string name, 
@@ -77,6 +79,7 @@ public class GroupsController : ControllerBase
     }
 
     [HttpDelete("{id}")]
+    [Authorize(Policy = "Write")]
     public async Task<IActionResult> DeleteGroup(string id, CancellationToken cancellationToken){
         try
         {
@@ -90,6 +93,7 @@ public class GroupsController : ControllerBase
     }
 
     [HttpPost]
+    [Authorize(Policy = "Write")]
     public async Task<ActionResult<GroupResponse>> CreateGroup([FromBody] CreateGroupRequest groupRequest,CancellationToken cancellationToken,
         [FromQuery] string name, 
         [FromQuery] int pageIndex = 1, 
@@ -126,7 +130,7 @@ public class GroupsController : ControllerBase
     }
 
     [HttpPut("{id}")]
-
+    [Authorize(Policy = "Write")]
     public async Task<IActionResult> UpdateGroup(string id,[FromBody]UpdateGroupRequest groupRequest,CancellationToken cancellationToken){
         try
         {
